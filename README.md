@@ -1,5 +1,5 @@
 # Colourify
-<h2> CST2120 - Web Development Coursework </h2>
+<h3> CST2120 - Web Development Coursework </h3>
 
 <h3>Assignment Description</h3>
 
