@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Palette</title>
+    <link rel="stylesheet" href="css/jquery.range2dslider.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/Font Awesome/all.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:500&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="container">
+
+        <div id="modalBackground"></div>
+
+        <div id="LeftPanel">
+            <div class="logo">Colour<span class="accent">ify</span></div>
+            <div id="MenuBar">
+                <nav id="navigation">
+                    <a class="menu-item" id="create" href="#">
+                        <span class="menu-item-text">Create</span>
+                        <ion-icon class="menu-item-button" name="color-palette-outline"></ion-icon>
+                    </a>
+                    <a class="menu-item" id="explore" href="#">
+                        <span class="menu-item-text">Explore</span>
+                        <ion-icon class="menu-item-button" name="earth-outline"></ion-icon>
+                    </a> 
+                    <a class="menu-item register-btn" href='#'>
+                        <span class="menu-item-text">Register</span>
+                        <ion-icon class="menu-item-button" name="person-add-outline"></ion-icon>
+                    </a>
+                    <a class="menu-item login-btn" href='#'>
+                        <span class="menu-item-text">Login</span>
+                        <ion-icon class="menu-item-button" name="person-outline"></ion-icon>
+                    </a>
+                </nav>
+            </div>
+            <div id="createMenu">
+                <div id="header">
+                    <h4 class='heading'>Apply colour harmony rule</h4>
+                    <div class='info-box'>?
+                        <span class='infobox-text'>The colour rules ensure a harmonic balance of colors based on the coulour you set as the Base Colour.</span>
+                    </div>
+                </div>
+
+                <div id="HarmonyRuleMenu" role="radiogroup">
+                    <label class="harmony-rule">
+                        <input type="radio" class="spectrum-Radio-input" name="harmony-rule-selector" aria-checked="true" value="ANALOGOUS" checked="">
+                        <span class="spectrum-Radio-label">Analogous</span>
+                    </label>
+                    <label class="harmony-rule">
+                        <input type="radio" class="spectrum-Radio-input" name="harmony-rule-selector" aria-checked="false" value="MONOCHROMATIC">
+                        <span class="spectrum-Radio-label">Monochromatic</span>
+                    </label>
+                    <label class="harmony-rule">
+                        <input type="radio" class="spectrum-Radio-input" name="harmony-rule-selector" aria-checked="false" value="TRIAD">
+                        <span class="spectrum-Radio-label">Triad</span>
+                    </label>
+                    <label class="harmony-rule">
+                        <input type="radio" class="spectrum-Radio-input" name="harmony-rule-selector" aria-checked="false" value="COMPLEMENTARY">
+                        <span class="spectrum-Radio-label">Complementary</span>
+                    </label>
+                    <label class="harmony-rule">
+                        <input type="radio" class="spectrum-Radio-input" name="harmony-rule-selector" aria-checked="false" value="CUSTOM">
+                        <span class="spectrum-Radio-label">Custom</span>
+                    </label>
+                </div>
+                <div class="sm-container">
+                    <div id="CurrentPalette">
+                        <div class="palette-colour" id="pc1"></div>
+                        <div class="palette-colour" id="pc2"></div>
+                        <div class="palette-colour" id="pc3"></div>
+                        <div class="palette-colour" id="pc4"></div>
+                    </div>
+                    <div class="call-to-action">
+                            <p class="call-to-action-text">Sign in to save this Color Theme.</p>
+                            <a class="btn login-btn">Sign in</a>
+                    </div>
+                </div>
+                <div id="spacebarTip"><span class="tiptext">Press spacebar to change colours</span></div>
+            </div>
+
+        </div>
+
+        <div id="CenterPanel">
+            <div class="colour" id="colour1">
+                <div class="colour-buttons">
+                    <a class="alternative-shades">
+                        <ion-icon class="test apps-sharp" name="apps-sharp"></ion-icon>
+                        <span class='alt tooltip'>Alternative Shades</span>
+                    </a>
+                    <a class="options-div">
+                        <ion-icon class="options" name="options"></ion-icon>
+                        <span class='adjust tooltip'>Adjust</span>
+                        <div class="adjust-panel">
+                            <div class="inner-panel">
+                                <input class="graph-slider">
+                                <div class="inner-background"></div>
+                            </div>
+                            <div class="panel-slider">
+                                <input type="range" min="0" max="360" value="1" class="slider">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="colour-hex" data-tooltip="Edit">
+                    <input class="hex-text" type="text">
+                </div>
+                <ion-icon class="base-colour" name="caret-up-circle-outline"></ion-icon>
+                <span class='bc tooltip'>Set as base colour</span>
+                <div class="alt-shades-div"></div>
+            </div>
+
+            <div class="colour" id="colour2">
+                <div class="colour-buttons">
+                    <a class="alternative-shades">
+                        <ion-icon class="test apps-sharp" name="apps-sharp"></ion-icon>
+                        <span class='alt tooltip'>Alternative Shades</span>
+                    </a>
+                    <a class="options-div">
+                        <ion-icon class="options" name="options"></ion-icon>
+                        <span class='adjust tooltip'>Adjust</span>
+                        <div class="adjust-panel">
+                            <div class="inner-panel">
+                                <input class="graph-slider">
+                                <div class="inner-background"></div>
+                            </div>
+                            <div class="panel-slider">
+                                <input type="range" min="0" max="360" value="1" class="slider">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="colour-hex" data-tooltip="Edit">
+                    <input class="hex-text" type="text">
+                </div>
+                <ion-icon class="base-colour" name="caret-up-circle-outline"></ion-icon>
+                <span class='bc tooltip'>Set as base colour</span>
+                <div class="alt-shades-div"></div>
+            </div>
+
+            <div class="colour" id="colour3">
+                <div class="colour-buttons">
+                    <a class="alternative-shades">
+                        <ion-icon class="test apps-sharp" name="apps-sharp"></ion-icon>
+                        <span class='alt tooltip'>Alternative Shades</span>
+                    </a>
+                    <a class="options-div">
+                        <ion-icon class="options" name="options"></ion-icon>
+                        <span class='adjust tooltip'>Adjust</span>
+                        <div class="adjust-panel">
+                            <div class="inner-panel">
+                                <input class="graph-slider">
+                                <div class="inner-background"></div>
+                            </div>
+                            <div class="panel-slider">
+                                <input type="range" min="0" max="360" value="1" class="slider">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="colour-hex" data-tooltip="Edit">
+                    <input class="hex-text" type="text">
+                </div>
+                <ion-icon class="base-colour" name="caret-up-circle-outline"></ion-icon>
+                <span class='bc tooltip'>Set as base colour</span>
+                <div class="alt-shades-div"></div>
+            </div>
+
+            <div class="colour" id="colour4">
+                <div class="colour-buttons">
+                    <a class="alternative-shades">
+                        <ion-icon class="test apps-sharp" name="apps-sharp"></ion-icon>
+                        <span class='alt tooltip'>Alternative Shades</span>
+                    </a>
+                    <a class="options-div">
+                        <ion-icon class="options" name="options"></ion-icon>
+                        <span class='adjust tooltip'>Adjust</span>
+                        <div class="adjust-panel">
+                            <div class="inner-panel">
+                                <input class="graph-slider">
+                                <div class="inner-background"></div>
+                            </div>
+                            <div class="panel-slider">
+                                <input type="range" min="0" max="360" value="1" class="slider">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="colour-hex" data-tooltip="Edit">
+                    <input class="hex-text" type="text">
+                </div>
+                <ion-icon class="base-colour" name="caret-up-circle-outline"></ion-icon>
+                <span class='bc tooltip'>Set as base colour</span>
+                <div class="alt-shades-div"></div>
+            </div>
+        </div>
+	</div>
+</body>
+</html>
+<!-- Icons -->
+<script type="text/javascript" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<!-- JQuery -->
+<script type="text/javascript" src="js/JQuery/jquery.min.js"></script>
+<script type="text/javascript" src="js/JQuery/jquery.range2dslider.js"></script>
+<!-- Tiny Color -->
+<script type='text/javascript' src='js/tinycolor.js'></script>
+<!-- Page JS File -->
+<script type="text/javascript" src="js/index.js"></script>
